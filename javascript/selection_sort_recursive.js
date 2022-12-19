@@ -1,5 +1,15 @@
 function selectionSortRecursive(arr) {
-  // type your code here
+  const sorted = [];
+
+  while (arr.length > 0){
+    const min = Math.min(...arr);
+    const idx = arr.indexOf(min);
+    sorted.push(arr.splice(idx, 1)[0]);
+    // sorted.push(min);
+    // arr.splice(idx, 1);
+  }
+ 
+  return sorted; // type your code here
 }
 
 if (require.main === module) {

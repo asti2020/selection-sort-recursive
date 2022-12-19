@@ -1,4 +1,14 @@
 def selection_sort_recursive(arr)
+  sorted = []
+
+  until arr.length == 0
+    min = arr.min
+    idx = arr.index(min)
+    sorted << min
+    arr.delete_at(idx)
+  end
+  sorted
+
   # type your code in here
 end
 
@@ -8,7 +18,8 @@ if __FILE__ == $PROGRAM_NAME
   print selection_sort_recursive([3, -1, 5, 2])
 
   puts
-
+  print "=> "
+  print selection_sort_recursive([3, -1, 5, 2, -3])
   # Don't forget to add your own!
 end
 
